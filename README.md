@@ -1,64 +1,40 @@
-# Portfolio — GitHub Pages Setup
+# Portfolio Website
 
-## File Structure
+A static portfolio website with:
+- Masonry-style landing gallery
+- Three columns on desktop (equal width, varying image heights)
+- Click-through project detail pages
+- Responsive behavior for tablet and mobile
 
-```
-portfolio/
-├── index.html          ← Landing page (photo gallery)
-├── css/
-│   └── style.css
-├── js/
-│   └── gallery.js
-└── projects/
-    ├── project-1.html  ← One file per project
-    ├── project-2.html
-    └── ...
-```
+## Structure
 
-## Deploying to GitHub Pages
+- index.html: Landing page with masonry photo grid
+- style.css: Shared styles for landing and project pages
+- project-1.html to project-6.html: Individual project detail pages
 
-1. **Create a repo** on GitHub named `your-username.github.io`
-   (this gives you a clean URL: `https://your-username.github.io`)
-   — or use any repo name and it'll live at `https://your-username.github.io/repo-name`
+## Customize Content
 
-2. **Push this folder** to the repo:
-   ```bash
-   git init
-   git add .
-   git commit -m "initial portfolio"
-   git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
-   git push -u origin main
-   ```
+1. Open index.html
+2. Replace image URLs, project names, and categories in each gallery tile
+3. Update links if you add or rename project pages
 
-3. **Enable GitHub Pages**: Go to repo → Settings → Pages → Source: `main` branch, `/ (root)`
+To customize each project page:
+1. Open project-X.html
+2. Replace hero image URL
+3. Update title, description, role, timeline, and deliverables
 
-4. Your site will be live in ~1 minute at the URL shown in Settings → Pages.
+## Run Locally
 
-## Customising Your Portfolio
+Open index.html in your browser.
 
-### Replace placeholder content in `index.html`:
-- Change `Your Name` in the header
-- Replace each `<img src="https://images.unsplash.com/...">` with your own photos
-- Update `alt` text, `.project-title`, and `.project-tag` for each item
-- Update `href="projects/project-X.html"` links
+## Deploy With GitHub Pages
 
-### Add a new project:
-1. Copy `projects/project-1.html` → `projects/project-new.html`
-2. Add a new `<a class="gallery-item">` block in `index.html`
-3. Customise the copy and images
+1. Push this project to a GitHub repository
+2. In GitHub, open repository Settings > Pages
+3. Under Build and deployment:
+   - Source: Deploy from a branch
+   - Branch: main
+   - Folder: /(root)
+4. Save and wait for deployment
 
-### Change the color accent per card:
-Each `.gallery-item` has a `style="--accent: #hexcolor;"` — change this to match your project's mood.
-
-### Hosting your own images:
-Drop photos into an `images/` folder and reference them as:
-```html
-<img src="images/my-photo.jpg" alt="Description" />
-```
-
-## Fonts
-Uses Google Fonts (loaded from CDN):
-- **Cormorant Garamond** — headings and body on project pages
-- **DM Mono** — UI chrome and labels
-
-For offline/self-hosted use, download from fonts.google.com and update the `<link>` tags.
+Your site URL will be shown in the Pages settings after deployment.

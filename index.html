@@ -3,132 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <title>Ana Cao | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="bg-orb orb-a" aria-hidden="true"></div>
+  <div class="bg-orb orb-b" aria-hidden="true"></div>
 
-  <header>
-    <div class="header-inner">
-      <a href="index.html" class="site-name">Your Name</a>
-      <nav>
-        <a href="mailto:you@example.com">Contact</a>
-      </nav>
-    </div>
+  <header class="site-header">
+    <p class="eyebrow">Selected Works</p>
+    <h1>Stories Told in Light, Texture, and Time</h1>
+    <p class="intro">
+      A visual portfolio of projects across branding, interiors, campaigns, and digital experiences.
+      Click a frame to step into the full project story.
+    </p>
   </header>
 
   <main>
-    <div class="gallery" id="gallery">
-
-      <!-- Project 1 -->
-      <a href="projects/project-1.html" class="gallery-item" style="--accent: #c8b89a;">
-        <div class="photo-wrap">
-          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Mountain landscape" />
-          <div class="overlay">
-            <span class="project-title">Alpine Series</span>
-            <span class="project-tag">Photography</span>
-          </div>
-        </div>
+    <section class="masonry" aria-label="Project gallery">
+      <a class="tile" href="project-1.html" aria-label="Open Neon Stillness project">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1100&q=80" alt="Blue neon architecture details" />
+        <span class="tile-meta">
+          <strong>Neon Stillness</strong>
+          <em>Spatial Branding</em>
+        </span>
       </a>
 
-      <!-- Project 2 -->
-      <a href="projects/project-2.html" class="gallery-item" style="--accent: #8fa8b8;">
-        <div class="photo-wrap">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Abstract architecture" />
-          <div class="overlay">
-            <span class="project-title">Concrete Forms</span>
-            <span class="project-tag">Architecture</span>
-          </div>
-        </div>
+      <a class="tile" href="project-2.html" aria-label="Open Salt and Signal project">
+        <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1100&q=80" alt="Ocean sunset with atmospheric haze" />
+        <span class="tile-meta">
+          <strong>Salt &amp; Signal</strong>
+          <em>Campaign Direction</em>
+        </span>
       </a>
 
-      <!-- Project 3 -->
-      <a href="projects/project-3.html" class="gallery-item" style="--accent: #a89b8c;">
-        <div class="photo-wrap">
-          <img src="https://images.unsplash.com/photo-1495195134817-aeb325a55b65?w=600&q=80" alt="Portrait" />
-          <div class="overlay">
-            <span class="project-title">Still Life No. 7</span>
-            <span class="project-tag">Studio</span>
-          </div>
-        </div>
+      <a class="tile" href="project-3.html" aria-label="Open Material Echo project">
+        <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1100&q=80" alt="Minimal interior with wood and concrete" />
+        <span class="tile-meta">
+          <strong>Material Echo</strong>
+          <em>Interior Identity</em>
+        </span>
       </a>
 
-      <!-- Project 4 -->
-      <a href="projects/project-4.html" class="gallery-item" style="--accent: #b5a89e;">
-        <div class="photo-wrap">
-          <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80" alt="City at night" />
-          <div class="overlay">
-            <span class="project-title">Urban Nocturne</span>
-            <span class="project-tag">Documentary</span>
-          </div>
-        </div>
+      <a class="tile" href="project-4.html" aria-label="Open Field Notes project">
+        <img src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1100&q=80" alt="Person photographing in an open field" />
+        <span class="tile-meta">
+          <strong>Field Notes</strong>
+          <em>Editorial Series</em>
+        </span>
       </a>
 
-      <!-- Project 5 -->
-      <a href="projects/project-5.html" class="gallery-item" style="--accent: #9aab98;">
-        <div class="photo-wrap">
-          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&q=80" alt="Forest path" />
-          <div class="overlay">
-            <span class="project-title">Verdant Light</span>
-            <span class="project-tag">Nature</span>
-          </div>
-        </div>
+      <a class="tile" href="project-5.html" aria-label="Open Quiet Voltage project">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1100&q=80" alt="Creative studio desk with screens and sketches" />
+        <span class="tile-meta">
+          <strong>Quiet Voltage</strong>
+          <em>Web Experience</em>
+        </span>
       </a>
 
-      <!-- Project 6 -->
-      <a href="projects/project-6.html" class="gallery-item" style="--accent: #c4a882;">
-        <div class="photo-wrap">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Portrait" />
-          <div class="overlay">
-            <span class="project-title">Faces of Now</span>
-            <span class="project-tag">Portrait</span>
-          </div>
-        </div>
+      <a class="tile" href="project-6.html" aria-label="Open Red Thread project">
+        <img src="https://images.unsplash.com/photo-1524492449090-a0ca0d159395?auto=format&fit=crop&w=1100&q=80" alt="Fashion portrait with warm red lighting" />
+        <span class="tile-meta">
+          <strong>Red Thread</strong>
+          <em>Fashion Narrative</em>
+        </span>
       </a>
-
-      <!-- Project 7 -->
-      <a href="projects/project-7.html" class="gallery-item" style="--accent: #a8b5c2;">
-        <div class="photo-wrap">
-          <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&q=80" alt="Aerial view" />
-          <div class="overlay">
-            <span class="project-title">Birds Eye</span>
-            <span class="project-tag">Aerial</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Project 8 -->
-      <a href="projects/project-8.html" class="gallery-item" style="--accent: #bda89c;">
-        <div class="photo-wrap">
-          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=600&q=80" alt="Interior" />
-          <div class="overlay">
-            <span class="project-title">Quiet Interiors</span>
-            <span class="project-tag">Interior</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Project 9 -->
-      <a href="projects/project-9.html" class="gallery-item" style="--accent: #93a89a;">
-        <div class="photo-wrap">
-          <img src="https://images.unsplash.com/photo-1498550744921-75f79806b8a7?w=600&q=80" alt="Ocean" />
-          <div class="overlay">
-            <span class="project-title">Tidal Studies</span>
-            <span class="project-tag">Seascape</span>
-          </div>
-        </div>
-      </a>
-
-    </div>
+    </section>
   </main>
-
-  <footer>
-    <span>© 2026 Your Name</span>
-    <span>All rights reserved</span>
-  </footer>
-
-  <script src="js/gallery.js"></script>
 </body>
 </html>
