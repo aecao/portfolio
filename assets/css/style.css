@@ -133,6 +133,7 @@ main {
 .masonry {
   --masonry-columns: 3;
   --masonry-gap: 0.55rem;
+  margin-top: 0.55rem;
   column-count: var(--masonry-columns);
   column-gap: var(--masonry-gap);
 }
@@ -342,7 +343,21 @@ main {
   display: block;
   width: min(300px, 70%);
   height: auto;
-  margin-top: 0.8rem;
+  margin: 0.8rem auto 0;
+}
+
+.contact-line {
+  margin: 0.45rem 0;
+}
+
+.contact-label {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.contact-line .back-link {
+  display: inline;
+  margin-top: 0;
 }
 
 .cv-actions {
