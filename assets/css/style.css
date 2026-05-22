@@ -79,7 +79,7 @@ body {
   text-transform: uppercase;
   padding: 0.24rem 0.52rem;
   border-radius: 0;
-  border: none;
+  border: 1px solid transparent;
   background: #ffffff;
   transition: none;
 }
@@ -102,7 +102,7 @@ body {
 }
 
 .site-nav a[aria-current="page"] {
-  border: 1px solid #000;
+  border-color: #000;
 }
 
 .eyebrow {
@@ -334,9 +334,13 @@ main {
   padding-left: 1.2rem;
 }
 
+.about-emphasis {
+  font-style: italic;
+}
+
 .about-photo {
   display: block;
-  width: min(150px, 40%);
+  width: min(300px, 70%);
   height: auto;
   margin-top: 0.8rem;
 }
@@ -372,23 +376,25 @@ main {
 
 @media (max-width: 640px) {
   .site-header {
-    margin-top: 1.2rem;
-    padding: 1rem;
+    margin: 0.25rem auto 0.25rem;
+    padding: 0.6rem 0.5rem;
   }
 
   .site-nav {
-    gap: 0.8rem;
+    gap: 0.35rem;
+    flex-wrap: nowrap;
   }
 
   .site-title {
     font-size: 1.8rem;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.12rem;
   }
 
   .site-nav a {
-    font-size: 0.78rem;
-    letter-spacing: 0.04em;
-    padding: 0.2rem 0.45rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.02em;
+    padding: 0.14rem 0.28rem;
+    white-space: nowrap;
   }
 
   .masonry {
