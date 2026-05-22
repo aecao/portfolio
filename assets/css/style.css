@@ -115,7 +115,6 @@ body {
 }
 /* Disable clicking through to project pages from gallery */
 .masonry .tile {
-  pointer-events: none;
   cursor: default;
 }
 /* ============================================= */
