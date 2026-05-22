@@ -105,6 +105,14 @@
     scheduleLayout();
   }
 
-  var galleries = document.querySelectorAll(".masonry");
-  Array.prototype.forEach.call(galleries, initGallery);
+  function startMasonryWhenReady() {
+    var galleries = document.querySelectorAll(".masonry");
+    Array.prototype.forEach.call(galleries, initGallery);
+  }
+
+  if ("requestIdleCallback" in window) {
+    window.requestIdleCallback(startMasonryWhenReady, { timeout: 300 });
+  } else {
+    window.setTimeout(startMasonryWhenReady, 120);
+  }
 })();
