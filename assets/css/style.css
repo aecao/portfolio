@@ -418,6 +418,7 @@ main {
 
 @media (max-width: 640px) {
   :root {
+    --main-inner-pad: 0.15rem;
     --masonry-edge: 0.3rem;
   }
 
@@ -427,6 +428,7 @@ main {
   }
 
   .site-header {
+    width: min(1100px, calc(100vw - 1rem));
     margin: 0.25rem auto 0.25rem;
     padding: 0.6rem 0.5rem 0.6rem calc(var(--main-inner-pad) + var(--masonry-edge));
   }
