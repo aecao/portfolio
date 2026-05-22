@@ -54,7 +54,7 @@ body {
 
 .site-nav {
   display: flex;
-  gap: 0.55rem;
+  gap: 0.8rem;
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: 0;
@@ -84,11 +84,16 @@ body {
   transition: none;
 }
 
+.site-nav a[href="about.html"],
+.site-nav a[href="contact.html"] {
+  text-transform: none;
+}
+
 .site-nav a:hover,
 .site-nav a:focus-visible {
   color: #fff;
-  background: var(--accent);
-  border-color: var(--accent);
+  background: #000;
+  border-color: #000;
 }
 
 .eyebrow {
