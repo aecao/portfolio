@@ -149,9 +149,8 @@ main {
 .masonry {
   --masonry-columns: 3;
   --masonry-gap: 0.55rem;
-  --masonry-edge: 0.55rem;
   margin-top: 0.55rem;
-  padding-inline: var(--masonry-edge);
+  margin-inline: 0.75rem;
   column-count: var(--masonry-columns);
   column-gap: var(--masonry-gap);
 }
