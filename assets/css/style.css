@@ -105,6 +105,21 @@ body {
   border-color: #000;
 }
 
+/* =============================================
+   TEMP-DISABLED — remove both rules to reinstate
+   ============================================= */
+/* Hide Project List nav link across all pages */
+.site-nav a[href="project-list.html"],
+.site-nav a[href="../project-list.html"] {
+  display: none;
+}
+/* Disable clicking through to project pages from gallery */
+.masonry .tile {
+  pointer-events: none;
+  cursor: default;
+}
+/* ============================================= */
+
 .eyebrow {
   display: none;
 }
