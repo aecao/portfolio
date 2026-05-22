@@ -54,21 +54,22 @@ body {
 
 .site-nav {
   display: flex;
-  gap: 0.8rem;
+  gap: 1rem;
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: 0;
 }
 
-.site-nav a {
+.site-nav a,
+.site-nav .nav-brand {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   color: var(--ink);
   text-decoration: none;
-  font-size: 0.78rem;
-  letter-spacing: 0.04em;
+  font-size: 0.84rem;
+  letter-spacing: 0.045em;
   text-transform: uppercase;
-  padding: 0.2rem 0.45rem;
+  padding: 0.24rem 0.52rem;
   border-radius: 0;
   border: none;
   background: #ffffff;
@@ -339,6 +340,17 @@ main {
   .site-header {
     margin-top: 1.2rem;
     padding: 1rem;
+  }
+
+  .site-nav {
+    gap: 0.8rem;
+  }
+
+  .site-nav a,
+  .site-nav .nav-brand {
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    padding: 0.2rem 0.45rem;
   }
 
   .masonry {
