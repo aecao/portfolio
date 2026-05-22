@@ -224,51 +224,50 @@ main {
   outline-offset: 2px;
 }
 
-.project-layout {
+
+.project-template {
   width: min(1100px, calc(100vw - 2rem));
   margin: 2rem auto;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 1.4rem;
-  align-items: start;
 }
 
-.project-hero {
-  margin: 0;
-  border-radius: 0;
-  overflow: hidden;
-  border: none;
-  box-shadow: none;
-  background: #fff;
+.project-text {
+  width: min(740px, 100%);
+  margin: 0 auto;
+  text-align: left;
 }
 
-.project-hero img {
-  width: 100%;
-  display: block;
-  max-height: 78vh;
-  object-fit: cover;
-}
-
-.project-panel {
-  border: none;
-  border-radius: 0;
-  background: var(--panel);
-  padding: 1.1rem;
-  box-shadow: none;
-}
-
-.project-panel .eyebrow {
-  margin-bottom: 0.5rem;
-}
-
-.project-panel h1 {
+.project-text h1 {
   margin: 0;
   font-size: clamp(1.9rem, 4.3vw, 3rem);
+  font-weight: 700;
 }
 
-.project-panel p {
+.project-kind {
+  margin: 0.5rem 0 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.project-meta {
+  margin: 0.2rem 0 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.project-description {
+  margin: 1rem 0 0;
   color: var(--muted);
   line-height: 1.58;
+}
+
+.project-images {
+  width: min(980px, 100%);
+  margin: 1.4rem auto 0;
+  text-align: center;
 }
 
 .project-list {
@@ -347,10 +346,6 @@ main {
 @media (max-width: 960px) {
   .masonry {
     column-count: 2;
-  }
-
-  .project-layout {
-    grid-template-columns: 1fr;
   }
 }
 
