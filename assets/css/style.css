@@ -131,8 +131,22 @@ main {
 }
 
 .masonry {
-  column-count: 3;
-  column-gap: 0.55rem;
+  --masonry-columns: 3;
+  --masonry-gap: 0.55rem;
+  column-count: var(--masonry-columns);
+  column-gap: var(--masonry-gap);
+}
+
+.masonry.masonry-enhanced {
+  position: relative;
+  column-count: 1;
+  column-gap: 0;
+}
+
+.masonry.masonry-enhanced .tile {
+  position: absolute;
+  margin: 0;
+  display: block;
 }
 
 .tile {
@@ -345,7 +359,7 @@ main {
 
 @media (max-width: 960px) {
   .masonry {
-    column-count: 2;
+    --masonry-columns: 2;
   }
 }
 
@@ -371,7 +385,7 @@ main {
   }
 
   .masonry {
-    column-count: 1;
+    --masonry-columns: 1;
   }
 
   .cv-viewer,
