@@ -63,7 +63,7 @@ body {
 .site-title {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
-  font-size: 0.98rem;
+  font-size: 1.96rem;
   letter-spacing: 0.05em;
   margin-bottom: 0.35rem;
   padding-left: 0.52rem;
@@ -360,7 +360,7 @@ main {
   }
 
   .site-title {
-    font-size: 0.9rem;
+    font-size: 1.8rem;
     margin-bottom: 0.25rem;
   }
 
