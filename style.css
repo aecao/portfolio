@@ -268,13 +268,15 @@ main {
 .back-link {
   display: inline-block;
   margin-top: 0.9rem;
-  font-weight: 700;
-  color: var(--accent-2);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  text-decoration: none;
+  color: #2200ff;
 }
 
 .back-link:hover,
 .back-link:focus-visible {
-  color: var(--accent);
+  color: #2200ff;
 }
 
 .subpage {
