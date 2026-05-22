@@ -115,6 +115,7 @@ body {
 }
 /* Disable clicking through to project pages from gallery */
 .masonry .tile {
+  pointer-events: none;
   cursor: default;
 }
 /* ============================================= */
@@ -148,7 +149,9 @@ main {
 .masonry {
   --masonry-columns: 3;
   --masonry-gap: 0.55rem;
+  --masonry-edge: 0.55rem;
   margin-top: 0.55rem;
+  padding-inline: var(--masonry-edge);
   column-count: var(--masonry-columns);
   column-gap: var(--masonry-gap);
 }

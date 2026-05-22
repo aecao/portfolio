@@ -34,8 +34,11 @@
 
     var columnCount = getColumnCount(gallery);
     var gap = getNumberVar(gallery, "--masonry-gap", 8);
+    var paddingLeft = getNumberVar(gallery, "padding-left", 0);
+    var paddingRight = getNumberVar(gallery, "padding-right", 0);
+    var usableWidth = Math.max(0, gallery.clientWidth - paddingLeft - paddingRight);
     var totalGap = gap * (columnCount - 1);
-    var columnWidth = (gallery.clientWidth - totalGap) / columnCount;
+    var columnWidth = (usableWidth - totalGap) / columnCount;
     var columnHeights = new Array(columnCount).fill(0);
     var stackColumns = new Map();
 
@@ -52,7 +55,7 @@
         }
       }
 
-      var x = (columnWidth + gap) * columnIndex;
+      var x = paddingLeft + (columnWidth + gap) * columnIndex;
       var y = columnHeights[columnIndex];
 
       tile.style.width = columnWidth + "px";
@@ -89,12 +92,6 @@
     if (document.fonts && document.fonts.ready) {
       document.fonts.ready.then(scheduleLayout);
     }
-
-    Array.prototype.forEach.call(gallery.querySelectorAll(".tile"), function (tile) {
-      tile.addEventListener("click", function (event) {
-        event.preventDefault();
-      });
-    });
 
     scheduleLayout();
   }
