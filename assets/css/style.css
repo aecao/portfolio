@@ -7,6 +7,8 @@
   --accent: #b8432f;
   --accent-2: #2a6c68;
   --shadow: 0 12px 38px rgba(20, 16, 14, 0.16);
+  --main-inner-pad: 0.55rem;
+  --masonry-edge: 1rem;
 }
 
 * {
@@ -43,7 +45,7 @@ body {
 .site-header {
   width: min(1100px, calc(100vw - 4rem));
   margin: 1rem auto 1rem;
-  padding: 0.55rem 0.75rem 0.55rem 0;
+  padding: 0.55rem 0.75rem 0.55rem calc(var(--main-inner-pad) + var(--masonry-edge));
   border: none;
   border-radius: 0;
   background: var(--panel);
@@ -142,13 +144,12 @@ h1 {
 main {
   width: min(1100px, calc(100vw - 4rem));
   margin: 0 auto 2.2rem;
-  padding-inline: 0.55rem;
+  padding-inline: var(--main-inner-pad);
 }
 
 .masonry {
   --masonry-columns: 3;
   --masonry-gap: 0.55rem;
-  --masonry-edge: 1rem;
   width: 100%;
   max-width: 100%;
   margin-top: 0.55rem;
@@ -414,9 +415,13 @@ main {
 }
 
 @media (max-width: 640px) {
+  :root {
+    --masonry-edge: 0.6rem;
+  }
+
   .site-header {
     margin: 0.25rem auto 0.25rem;
-    padding: 0.6rem 0.5rem 0.6rem 0;
+    padding: 0.6rem 0.5rem 0.6rem calc(var(--main-inner-pad) + var(--masonry-edge));
   }
 
   .site-nav {
@@ -438,7 +443,6 @@ main {
 
   .masonry {
     --masonry-columns: 1;
-    --masonry-edge: 0.6rem;
   }
 
   .cv-viewer,
