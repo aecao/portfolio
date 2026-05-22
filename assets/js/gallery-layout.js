@@ -71,6 +71,7 @@
 
   function initGallery(gallery) {
     var rafId = null;
+
     function scheduleLayout() {
       if (rafId !== null) {
         cancelAnimationFrame(rafId);
@@ -80,7 +81,9 @@
       });
     }
 
-    Array.prototype.forEach.call(gallery.querySelectorAll("img"), function (image) {
+    var images = Array.prototype.slice.call(gallery.querySelectorAll("img"));
+
+    images.forEach(function (image) {
       if (!image.complete) {
         image.addEventListener("load", scheduleLayout, { once: true });
         image.addEventListener("error", scheduleLayout, { once: true });
