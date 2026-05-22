@@ -66,6 +66,7 @@ body {
   font-size: 0.98rem;
   letter-spacing: 0.05em;
   margin-bottom: 0.35rem;
+  padding-left: 0.52rem;
 }
 
 .site-nav a {
@@ -84,8 +85,11 @@ body {
 }
 
 .site-nav a[href="index.html"],
+.site-nav a[href="../index.html"],
 .site-nav a[href="project-list.html"],
+.site-nav a[href="../project-list.html"],
 .site-nav a[href="about.html"],
+.site-nav a[href="../about.html"],
 .site-nav a[href="contact.html"] {
   text-transform: none;
 }
@@ -95,6 +99,10 @@ body {
   color: #fff;
   background: #000;
   border-color: #000;
+}
+
+.site-nav a[aria-current="page"] {
+  border: 1px solid #000;
 }
 
 .eyebrow {
