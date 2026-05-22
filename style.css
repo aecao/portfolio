@@ -60,15 +60,6 @@ body {
   margin-bottom: 0;
 }
 
-.site-nav::before {
-  content: "ANNA CAO";
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 0.88rem;
-  letter-spacing: 0.06em;
-  margin-right: 0.3rem;
-}
-
 .site-nav a {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -84,6 +75,7 @@ body {
   transition: none;
 }
 
+.site-nav a[href="project-list.html"],
 .site-nav a[href="about.html"],
 .site-nav a[href="contact.html"] {
   text-transform: none;
@@ -97,13 +89,7 @@ body {
 }
 
 .eyebrow {
-  margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.74rem;
-  font-weight: 700;
-  color: var(--accent);
+  display: none;
 }
 
 h1 {
@@ -128,26 +114,30 @@ main {
 }
 
 .masonry {
-  column-count: 3;
-  column-gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
 }
 
 .tile {
-  display: inline-block;
+  display: block;
   width: 100%;
-  margin: 0 0 1rem;
+  margin: 0;
   border-radius: 0;
   overflow: hidden;
   position: relative;
   border: none;
   background: #fff;
   box-shadow: none;
-  break-inside: avoid;
   color: inherit;
   text-decoration: none;
   transform: none;
   opacity: 1;
   animation: none;
+}
+
+.tile.wide {
+  grid-column: span 2;
 }
 
 .tile:nth-child(2) { animation-delay: 90ms; }
@@ -318,7 +308,7 @@ main {
 
 @media (max-width: 960px) {
   .masonry {
-    column-count: 2;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .project-layout {
@@ -333,7 +323,11 @@ main {
   }
 
   .masonry {
-    column-count: 1;
+    grid-template-columns: 1fr;
+  }
+
+  .tile.wide {
+    grid-column: span 1;
   }
 }
 
