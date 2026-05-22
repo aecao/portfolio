@@ -416,7 +416,12 @@ main {
 
 @media (max-width: 640px) {
   :root {
-    --masonry-edge: 0.6rem;
+    --masonry-edge: 0.3rem;
+  }
+
+  .gallery-page {
+    width: min(1100px, calc(100vw - 1rem));
+    padding-inline: 0.15rem;
   }
 
   .site-header {
