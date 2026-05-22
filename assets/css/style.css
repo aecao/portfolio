@@ -334,6 +334,13 @@ main {
   padding-left: 1.2rem;
 }
 
+.about-photo {
+  display: block;
+  width: min(150px, 40%);
+  height: auto;
+  margin-top: 0.8rem;
+}
+
 .cv-actions {
   display: flex;
   flex-wrap: wrap;
