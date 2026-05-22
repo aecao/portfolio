@@ -1,8 +1,8 @@
 :root {
-  --bg: #f3efe8;
+  --bg: #ffffff;
   --ink: #15120f;
   --muted: #54483f;
-  --panel: rgba(255, 255, 255, 0.78);
+  --panel: #ffffff;
   --line: rgba(21, 18, 15, 0.14);
   --accent: #b8432f;
   --accent-2: #2a6c68;
@@ -19,22 +19,13 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   color: var(--ink);
-  background:
-    radial-gradient(circle at 85% 14%, rgba(184, 67, 47, 0.18), transparent 34%),
-    radial-gradient(circle at 12% 78%, rgba(42, 108, 104, 0.2), transparent 28%),
-    var(--bg);
+  background: var(--bg);
   position: relative;
   overflow-x: hidden;
 }
 
 .bg-orb {
-  position: fixed;
-  width: 34rem;
-  height: 34rem;
-  border-radius: 999px;
-  filter: blur(60px);
-  z-index: -1;
-  opacity: 0.5;
+  display: none;
 }
 
 .orb-a {
@@ -51,18 +42,47 @@ body {
 
 .site-header {
   width: min(1100px, calc(100vw - 2rem));
-  margin: 2rem auto 1.5rem;
-  padding: 1.4rem 1.2rem;
+  margin: 1rem auto 1rem;
+  padding: 0.55rem 0.75rem;
   border: 1px solid var(--line);
-  border-radius: 1.25rem;
+  border-radius: 0;
   background: var(--panel);
-  backdrop-filter: blur(8px);
-  box-shadow: var(--shadow);
+  backdrop-filter: none;
+  box-shadow: 0 4px 14px rgba(20, 16, 14, 0.08);
   animation: settle 700ms ease-out both;
+}
+
+.site-nav {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+}
+
+.site-nav a {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.45rem;
+  border-radius: 0;
+  border: 1px solid var(--line);
+  background: #ffffff;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
 .eyebrow {
   margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-size: 0.74rem;
@@ -73,7 +93,7 @@ body {
 h1 {
   margin: 0.45rem 0 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 700;
   font-size: clamp(2rem, 5vw, 3.65rem);
   line-height: 1.02;
   max-width: 18ch;
@@ -100,7 +120,7 @@ main {
   display: inline-block;
   width: 100%;
   margin: 0 0 1rem;
-  border-radius: 1rem;
+  border-radius: 0;
   overflow: hidden;
   position: relative;
   border: 1px solid var(--line);
@@ -147,6 +167,8 @@ main {
 
 .tile-meta strong {
   display: block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
   font-size: 1.03rem;
 }
 
@@ -179,7 +201,7 @@ main {
 
 .project-hero {
   margin: 0;
-  border-radius: 1rem;
+  border-radius: 0;
   overflow: hidden;
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
@@ -195,7 +217,7 @@ main {
 
 .project-panel {
   border: 1px solid var(--line);
-  border-radius: 1rem;
+  border-radius: 0;
   background: var(--panel);
   padding: 1.1rem;
   box-shadow: var(--shadow);
@@ -235,6 +257,32 @@ main {
 .back-link:hover,
 .back-link:focus-visible {
   color: var(--accent);
+}
+
+.subpage {
+  width: min(900px, calc(100vw - 2rem));
+  margin: 2rem auto;
+  padding: 1.3rem;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.subpage h1 {
+  margin: 0.2rem 0 0.8rem;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.subpage p,
+.subpage li {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.subpage ul {
+  margin: 0.3rem 0 0;
+  padding-left: 1.2rem;
 }
 
 @media (max-width: 960px) {
