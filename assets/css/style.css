@@ -41,7 +41,7 @@ body {
 }
 
 .site-header {
-  width: min(1100px, calc(100vw - 2rem));
+  width: min(1100px, calc(100vw - 4rem));
   margin: 1rem auto 1rem;
   padding: 0.55rem 0.75rem 0.55rem 0;
   border: none;
@@ -141,7 +141,7 @@ h1 {
 }
 
 main {
-  width: min(1100px, calc(100vw - 2rem));
+  width: min(1100px, calc(100vw - 4rem));
   margin: 0 auto 2.2rem;
   padding-inline: 0.55rem;
 }
