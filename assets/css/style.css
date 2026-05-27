@@ -78,22 +78,12 @@ body {
   text-decoration: none;
   font-size: 0.84rem;
   letter-spacing: 0.045em;
-  text-transform: uppercase;
+  text-transform: none;
   padding: 0.24rem 0.52rem;
   border-radius: 0;
   border: 1px solid transparent;
   background: #ffffff;
   transition: none;
-}
-
-.site-nav a[href="index.html"],
-.site-nav a[href="../index.html"],
-.site-nav a[href="project-list.html"],
-.site-nav a[href="../project-list.html"],
-.site-nav a[href="about.html"],
-.site-nav a[href="../about.html"],
-.site-nav a[href="contact.html"] {
-  text-transform: none;
 }
 
 .site-nav a:hover,
@@ -112,7 +102,10 @@ body {
    ============================================= */
 /* Hide Project List nav link across all pages */
 .site-nav a[href="project-list.html"],
-.site-nav a[href="../project-list.html"] {
+.site-nav a[href="../project-list.html"],
+.site-nav a[href="/project-list/"],
+.site-nav a[href="../project-list/"],
+.site-nav a[href="../../project-list/"] {
   display: none;
 }
 /* Disable clicking through to project pages from gallery */
