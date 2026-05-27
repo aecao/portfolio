@@ -96,12 +96,6 @@
       document.fonts.ready.then(scheduleLayout);
     }
 
-    Array.prototype.forEach.call(gallery.querySelectorAll(".tile"), function (tile) {
-      tile.addEventListener("click", function (event) {
-        event.preventDefault();
-      });
-    });
-
     scheduleLayout();
   }
 

@@ -108,9 +108,9 @@ body {
 .site-nav a[href="../../project-list/"] {
   display: none;
 }
-/* Disable clicking through to project pages from gallery */
+/* Gallery tiles click through to project pages */
 .masonry .tile {
-  cursor: default;
+  cursor: pointer;
 }
 /* ============================================= */
 
