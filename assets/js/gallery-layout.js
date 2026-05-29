@@ -1,4 +1,38 @@
 (function () {
+  function createLightbox() {
+    var existing = document.querySelector(".lightbox");
+    if (existing) {
+      return existing;
+    }
+
+    var lightbox = document.createElement("div");
+    lightbox.className = "lightbox";
+    lightbox.innerHTML =
+      '<button type="button" class="lightbox-close" aria-label="Close image viewer">&times;</button>' +
+      '<img class="lightbox-image" alt="" />';
+
+    document.body.appendChild(lightbox);
+
+    function closeLightbox() {
+      lightbox.classList.remove("is-open");
+      document.body.classList.remove("lightbox-open");
+    }
+
+    lightbox.addEventListener("click", function (event) {
+      if (event.target === lightbox || event.target.classList.contains("lightbox-close")) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && lightbox.classList.contains("is-open")) {
+        closeLightbox();
+      }
+    });
+
+    return lightbox;
+  }
+
   function indexOfSmallest(values) {
     var smallestIndex = 0;
     for (var i = 1; i < values.length; i += 1) {
@@ -71,6 +105,7 @@
 
   function initGallery(gallery) {
     var rafId = null;
+    var lightbox = createLightbox();
 
     function scheduleLayout() {
       if (rafId !== null) {
@@ -95,6 +130,26 @@
     if (document.fonts && document.fonts.ready) {
       document.fonts.ready.then(scheduleLayout);
     }
+
+    Array.prototype.forEach.call(gallery.querySelectorAll('.tile[data-lightbox="true"]'), function (tile) {
+      tile.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        var tileImage = tile.querySelector("img");
+        var lightboxImage = lightbox.querySelector(".lightbox-image");
+        var fullImageSrc = tile.getAttribute("data-lightbox-src") || (tileImage && tileImage.getAttribute("src"));
+
+        if (!tileImage || !lightboxImage || !fullImageSrc) {
+          return;
+        }
+
+        lightboxImage.src = fullImageSrc;
+        lightboxImage.alt = tileImage.getAttribute("alt") || "Gallery image";
+
+        lightbox.classList.add("is-open");
+        document.body.classList.add("lightbox-open");
+      });
+    });
 
     scheduleLayout();
   }
