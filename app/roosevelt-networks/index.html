@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roosevelt Networks</title>
+  <script type="module" crossorigin src="/app/roosevelt-networks/assets/index-tTZC1Yt9.js"></script>
+  <link rel="stylesheet" crossorigin href="/app/roosevelt-networks/assets/index-BiVcA7yv.css">
+</head>
+<body>
+  <div id="app">
+    <header id="app-header">
+      <div class="header-brand-group">
+        <div class="app-brand">Roosevelt Networks</div>
+        <span id="refresh-status" class="refresh-status visually-hidden" role="status" aria-live="polite" hidden></span>
+      </div>
+      <div class="mode-switch">
+        <span class="mode-label">MODE</span>
+        <nav class="mode-tabs" aria-label="Network mode">
+          <button class="mode-tab" type="button" data-mode="relationships" aria-pressed="true">Relationships</button>
+          <button class="mode-tab" type="button" data-mode="timeline" aria-pressed="false">Timeline</button>
+          <button class="mode-tab" type="button" data-mode="map" aria-pressed="false">Map</button>
+        </nav>
+      </div>
+      <button id="refresh-sheets" class="header-refresh" type="button" title="Relink data from Google Sheets">
+        <span aria-hidden="true">↻</span><span>Relink data</span>
+      </button>
+    </header>
+    <div id="workspace" data-mode="relationships">
+      <div id="panel-dock" data-panel="filters">
+        <nav id="panel-tabs" aria-label="Sidebar panel">
+          <button class="panel-tab" type="button" data-panel="filters" aria-pressed="true">Filters</button>
+          <button class="panel-tab" type="button" data-panel="details" aria-pressed="false">Details</button>
+        </nav>
+      <aside id="sidebar">
+      <header class="sidebar-header">
+        <div class="sidebar-heading">
+          <h1>Filters</h1>
+        </div>
+        <button id="sidebar-toggle" class="sidebar-toggle" type="button" aria-label="Hide filters" aria-expanded="true" aria-controls="sidebar-content">−</button>
+      </header>
+
+      <div id="sidebar-content">
+        <div id="sidebar-search" class="panel">
+          <input id="search" type="search" placeholder="Search actor…" autocomplete="off" />
+          <div id="search-results" class="search-results"></div>
+        </div>
+
+        <div id="sidebar-filters-scroll">
+          <section class="filter-section">
+            <h2>ACTORS</h2>
+
+            <div class="panel">
+              <div class="filter-heading">
+                <button class="filter-group-toggle" type="button" aria-expanded="false" aria-controls="node-type-group">
+                  <span class="filter-group-chevron">▸</span><span>SECTOR</span>
+                </button>
+              </div>
+              <div id="node-type-group" class="filter-group-content" hidden>
+                <label class="filter-all"><input id="node-type-select-all" type="checkbox" checked /><span>All</span></label>
+                <div id="node-type-filters" class="filter-list"></div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <div class="filter-heading">
+                <button class="filter-group-toggle" type="button" aria-expanded="false" aria-controls="topic-group">
+                  <span class="filter-group-chevron">▸</span><span>CATEGORY</span>
+                </button>
+              </div>
+              <div id="topic-group" class="filter-group-content" hidden>
+                <label class="filter-all"><input id="topic-select-all" type="checkbox" checked /><span>All</span></label>
+                <div id="topic-filters" class="filter-list"></div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <div class="filter-heading">
+                <button class="filter-group-toggle" type="button" aria-expanded="false" aria-controls="scale-group">
+                  <span class="filter-group-chevron">▸</span><span>SCALE</span>
+                </button>
+              </div>
+              <div id="scale-group" class="filter-group-content" hidden>
+                <label class="filter-all"><input id="scale-select-all" type="checkbox" checked /><span>All</span></label>
+                <div id="scale-filters" class="filter-list"></div>
+              </div>
+            </div>
+
+            <div class="panel relationships-only">
+              <div class="filter-heading">
+                <button class="filter-group-toggle" type="button" aria-expanded="false" aria-controls="appearance-group">
+                  <span class="filter-group-chevron">▸</span><span>APPEARANCE</span>
+                </button>
+              </div>
+              <div id="appearance-group" class="filter-group-content" hidden>
+                <div class="appearance-controls">
+                  <label for="color-mode">COLOR MODE</label>
+                  <select id="color-mode">
+                    <option value="sector">Sector</option>
+                    <option value="category">Category</option>
+                    <option value="public-sentiment">Public sentiment</option>
+                    <option value="plain">Plain</option>
+                  </select>
+                  <label for="size-mode">SIZE MODE</label>
+                  <select id="size-mode">
+                    <option value="scale-of-actor">Scale of actor</option>
+                    <option value="public-interest">Public interest</option>
+                    <option value="degree-centrality">Number of connections (degree centrality)</option>
+                    <option value="closeness-centrality">Average shortest-path (closeness centrality)</option>
+                    <option value="betweenness-centrality">Bridging (betweenness centrality)</option>
+                    <option value="eigenvector-centrality">Prestige (eigenvector centrality)</option>
+                    <option value="plain">Plain</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="filter-section timeline-only">
+            <h2>YEAR RANGE</h2>
+            <div class="panel timeline-range-fields">
+              <label for="timeline-start">From
+                <input id="timeline-start" type="number" min="1920" max="2025" step="1" value="1920" />
+              </label>
+              <label for="timeline-end">To
+                <input id="timeline-end" type="number" min="1921" max="2026" step="1" value="2026" />
+              </label>
+            </div>
+          </section>
+
+          <section class="filter-section relationships-only">
+            <h2>RELATIONSHIPS</h2>
+            <div class="panel">
+              <label class="filter-all"><input id="edge-type-select-all" type="checkbox" checked /><span>All</span></label>
+              <div id="edge-type-filters" class="filter-list"></div>
+            </div>
+          </section>
+
+          <section class="filter-section relationships-only">
+            <h2>TIME RANGE</h2>
+            <div class="panel">
+              <label class="toggle-row">
+                <input id="year-filter-toggle" type="checkbox" />
+                <span>Filter by active year</span>
+              </label>
+              <div id="year-controls" class="year-controls" hidden>
+                <label for="year-slider">Year <output id="year-value">2026</output></label>
+                <input id="year-slider" type="range" min="1920" max="2026" step="1" value="2026" />
+              </div>
+              <label class="toggle-row">
+                <input id="position-filter-toggle" type="checkbox" />
+                <span>Position–Incumbent</span>
+              </label>
+            </div>
+          </section>
+        </div>
+
+        <div id="sidebar-footer" class="panel relationships-only">
+          <label class="toggle-row">
+            <input id="freeze-positions" type="checkbox" />
+            <span>Freeze actor position</span>
+          </label>
+          <label class="toggle-row">
+            <input id="zoom-to-selected" type="checkbox" checked />
+            <span>Zoom to selected</span>
+          </label>
+        </div>
+      </div>
+      </aside>
+        <aside id="details-sidebar" aria-label="Details">
+          <div id="details-resize-handle" aria-hidden="true"></div>
+          <header class="sidebar-header">
+            <div class="sidebar-heading">
+              <h1>Details</h1>
+            </div>
+            <button id="details-toggle" class="sidebar-toggle" type="button" aria-label="Minimize details" aria-expanded="true">−</button>
+          </header>
+          <div id="details-content">
+            <section id="active-selection" class="selection-section" hidden>
+              <header class="selection-heading">
+                <h2 id="current-selection-title"></h2>
+                <button id="pin-selection" class="pin-selection" type="button">Pin</button>
+              </header>
+              <div id="node-details" class="details"></div>
+            </section>
+            <section id="pinned-section" class="pinned-section" aria-label="Pinned selections" hidden>
+              <header class="pinned-section-heading">
+                <h2>Pinned selections</h2>
+                <span id="pinned-count">0</span>
+              </header>
+              <ol id="pinned-list" class="pinned-list"></ol>
+            </section>
+          </div>
+        </aside>
+      </div>
+      <main id="graph-container">
+        <div id="network-gradient" aria-hidden="true"></div>
+        <section id="timeline-view" aria-label="Actor timeline" aria-hidden="true">
+          <svg id="timeline-axis" aria-hidden="true"></svg>
+          <div id="timeline-scroll">
+            <svg id="timeline-chart" role="img" aria-label="Actor periods of existence"></svg>
+          </div>
+          <div id="timeline-summary" aria-live="polite"></div>
+        </section>
+      </main>
+      <div id="mode-placeholder" hidden aria-hidden="true">
+        <section class="map-shell" aria-label="Interactive map of Roosevelt Island">
+          <div id="map" role="application" aria-label="Map. Drag to pan and use the controls to zoom."></div>
+
+          <div class="map-style-switch" role="group" aria-label="Basemap style">
+            <button class="map-style-button is-active" type="button" data-map-style="light" aria-pressed="true">Light</button>
+            <button class="map-style-button" type="button" data-map-style="street" aria-pressed="false">Street</button>
+          </div>
+
+          <div class="map-controls" aria-label="Map controls">
+            <button class="map-control" type="button" data-map-action="zoom-in" aria-label="Zoom in" title="Zoom in">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12" /></svg>
+            </button>
+            <button class="map-control" type="button" data-map-action="zoom-out" aria-label="Zoom out" title="Zoom out">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12" /></svg>
+            </button>
+            <span class="control-divider"></span>
+            <button class="map-control home-control" type="button" data-map-action="home" aria-label="Reset map view" title="Reset map view">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 9.2 10 4l6.5 5.2M5.5 8v7.5h9V8M8.3 15.5v-4.2h3.4v4.2" /></svg>
+            </button>
+          </div>
+
+          <div class="map-caption">
+            <span>ROOSEVELT ISLAND</span>
+            <span class="caption-divider"></span>
+            <span id="map-building-state" aria-live="polite">LOADING</span>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <div id="selection-context-menu" class="selection-context-menu" role="menu" hidden>
+    <button id="context-pin-toggle" type="button" role="menuitem">Pin selection</button>
+  </div>
+</body>
+</html>
