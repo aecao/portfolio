@@ -146,7 +146,7 @@ OWNER-TENANT,New York City Government,Roosevelt Island Operating Corporation,"6,
 OWNER-TENANT,Roosevelt Island Operating Corporation,Cornell Tech,"522,720 sq ft",99-years,,
 OWNER-TENANT,Roosevelt Island Operating Corporation,NYC Health + Hospitals/Coler,"479,160 sq ft",99-years,,
 OWNER-TENANT,Roosevelt Island Operating Corporation,The Related Company,"653,400 sq ft",99-years,,
-OWNER-TENANT,Roosevelt Island Operating Corporation,Urban Intervention Group,/,Short-term,,
+,,,,,,
 OWNER-TENANT,Roosevelt Island Operating Corporation,Roosevelt Island Associates,"370,260 sq ft",99-years,,
 OWNER-TENANT,Roosevelt Island Operating Corporation,The Octagon,"130,680 sq ft",99-years,,
 OWNER-TENANT,Roosevelt Island Operating Corporation,The Hudson Company,"653,400 sq ft",99-years,,
@@ -305,11 +305,11 @@ POSITION-INCUMBENT,Director of goverment and Community relationship,Jane Swanson
 REPRESENTATIVE-ELECTOR,Gensler Family Sesquicentennial Executive Director of AAP NYC,Cornell Tech,,,,Riverwalk Point
 REPRESENTATIVE-ELECTOR,Deputy Director of Gensler Family AAP NYC Center,Cornell Tech,,,,Blackwell House
 REPRESENTATIVE-ELECTOR,Director of goverment and Community relationship,Cornell Tech,,,,Roosevelt Island Youth Center
-,,,,,,St. Frances Xavier Cabrini Church
-,,,,,,Rivercross
-,,,,,,Island House
-,,,,,,Westview
-,,,,,,Roosevelt Island Senior Center
+PATH,,,,,,St. Frances Xavier Cabrini Church
+PATH,,,,,,Rivercross
+PATH,,,,,,Island House
+PATH,,,,,,Westview
+FINANCIAL (RECIPIENT-SENDER),Tata Group,,,,,Roosevelt Island Senior Center
 ,,,,,,The Landings
 ,,,,,,The Child School / Legacy High School
 ,,,,,,The Roosevelt Island School PS/IS 217
@@ -347,14 +347,14 @@ REPRESENTATIVE-ELECTOR,Director of goverment and Community relationship,Cornell 
 ,,,,,,Hornblower
 ,,,,,,New York City Emergency Management Department
 ,,,,,,Roosevelt Island Community Garden
-,,,,,,Coler Coastal Resiliency Program 
+,,,,,,Coler Coastal Resiliency Program
 ,,,,,,Motorgate Parking
 ,,,,,,Red Bus
 ,,,,,,Citibike
 ,,,,,,Astoria Ferry
 ,,,,,,Cat Sanctuary
 ,,,,,,Roosevelt Island Green Spaces
-,,,,,,Four Freedoms Park Conservancy 
+,,,,,,Four Freedoms Park Conservancy
 ,,,,,,NY State Parks
 ,,,,,,FDR Four Freedoms State Park
 ,,,,,,Neil Weissman
@@ -418,3 +418,16 @@ REPRESENTATIVE-ELECTOR,Director of goverment and Community relationship,Cornell 
 ,,,,,,
 ,,,,,,President & CEO of the Urban Development Corporation
 ,,,,,,"President, CEO & Commissioner of Empire State Development"
+,,,,,,
+,,,,,,Lexington Av/63 St
+,,,,,,Roosevelt Island Subway station
+,,,,,,Lexington Av/63 St
+,,,,,,Lexington Av/63 St
+,,,,,,Lexington Av/63 St
+,,,,,,Lexington Av/63 St
+,,,,,,Lexington Av/63 St
+,,,,,,Communiy District 8
+,,,,,,Judy Birdy
+,,,,,,
+,,,,,,Episcopal Church of the Good Shepherd
+,,,,,,The Sanctuary
