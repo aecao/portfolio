@@ -293,6 +293,30 @@ body.lightbox-open {
   outline-offset: 2px;
 }
 
+.app-tile img {
+  filter: brightness(0.62);
+  transition: filter 180ms ease;
+}
+
+.app-tile:hover img,
+.app-tile:focus-visible img {
+  filter: brightness(1);
+}
+
+.app-tile::after {
+  display: none;
+}
+
+.app-tile .tile-meta {
+  opacity: 1;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.app-tile:hover .tile-meta strong,
+.app-tile:focus-visible .tile-meta strong {
+  text-decoration: underline;
+}
+
 
 .project-template {
   width: min(1100px, calc(100vw - 4rem));
