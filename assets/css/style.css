@@ -293,6 +293,17 @@ body.lightbox-open {
   outline-offset: 2px;
 }
 
+.apps-page .masonry {
+  display: grid;
+  grid-template-columns: repeat(var(--masonry-columns), minmax(0, 1fr));
+  gap: var(--masonry-gap);
+  column-count: auto;
+}
+
+.apps-page .app-tile {
+  grid-column: span 2;
+}
+
 .app-tile img {
   filter: brightness(0.62);
   transition: filter 180ms ease;
@@ -558,6 +569,10 @@ body.lightbox-open {
 
   .masonry {
     --masonry-columns: 1;
+  }
+
+  .apps-page .app-tile {
+    grid-column: span 1;
   }
 
   .project-images {
