@@ -295,13 +295,38 @@ body.lightbox-open {
 
 .apps-page .masonry {
   display: grid;
-  grid-template-columns: repeat(var(--masonry-columns), minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--masonry-gap);
+  align-items: start;
   column-count: auto;
 }
 
 .apps-page .app-tile {
   grid-column: span 2;
+  margin: 0;
+}
+
+.app-resource-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  aspect-ratio: 1;
+  padding: 1.25rem;
+  background: #0035ff;
+  color: #fff;
+  text-decoration: none;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1.3;
+}
+
+.app-resource-tile:hover,
+.app-resource-tile:focus-visible {
+  text-decoration: underline;
+}
+
+.app-resource-tile:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
 }
 
 .app-tile img {
@@ -571,8 +596,19 @@ body.lightbox-open {
     --masonry-columns: 1;
   }
 
+  .apps-page .masonry {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .apps-page .app-tile {
     grid-column: span 1;
+  }
+
+  .app-resource-tile {
+    display: block;
+    aspect-ratio: auto;
+    padding: 0.75rem;
+    font-size: 0.9rem;
   }
 
   .project-images {

@@ -27,6 +27,13 @@ To customize each project page:
 
 Open index.html in your browser.
 
+## Apps Resources
+
+The Apps page pairs the Social Actor Model GIF with a favicon-blue documentation link.
+The link is a square beside the GIF on desktop and a full-width strip below it on mobile
+(640px and narrower). Update its destination and label in `apps/index.html`; its layout
+is defined by the `.app-resource-tile` rules in `assets/css/style.css`.
+
 ## Deploy With GitHub Pages
 
 1. Push this project to a GitHub repository
