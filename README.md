@@ -29,10 +29,14 @@ Open index.html in your browser.
 
 ## Apps Resources
 
-The Apps page pairs the Social Actor Model GIF with a favicon-blue documentation link.
-The link is a square beside the GIF on desktop and a full-width strip below it on mobile
-(640px and narrower). Update its destination and label in `apps/index.html`; its layout
-is defined by the `.app-resource-tile` rules in `assets/css/style.css`.
+The Apps page pairs the Actor Network GIF with a favicon-blue resource panel.
+On desktop, the panel matches the GIF's height and displays a large white info icon.
+Hovering the panel or keyboard-focusing a resource link dims the icon and reveals
+the labels. Tutorial, Methodology, and Importing custom datasets each link to their
+own page; only the hovered or focused link is underlined.
+On mobile (640px and narrower), the panel is a full-width strip below the GIF with
+the labels always visible. Update their destinations and labels in `apps/index.html`;
+its layout is defined by the `.app-resource-tile` rules in `assets/css/style.css`.
 
 ## Deploy With GitHub Pages
 

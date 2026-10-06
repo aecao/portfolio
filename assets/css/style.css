@@ -218,11 +218,15 @@ main {
   transition: none;
 }
 
-.tile-meta strong {
-  display: block;
+.tile-meta strong,
+.app-resource-label {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 1.03rem;
+}
+
+.tile-meta strong {
+  display: block;
 }
 
 .tile-meta em {
@@ -307,11 +311,8 @@ body.lightbox-open {
 }
 
 .app-resource-tile {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  aspect-ratio: 1;
-  padding: 1.25rem;
+  position: relative;
+  align-self: stretch;
   background: #0035ff;
   color: #fff;
   text-decoration: none;
@@ -319,12 +320,61 @@ body.lightbox-open {
   line-height: 1.3;
 }
 
-.app-resource-tile:hover,
-.app-resource-tile:focus-visible {
+.app-resource-icon {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: clamp(4rem, 8vw, 7rem);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.app-resource-icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 70%;
+  aspect-ratio: 1;
+  border: clamp(0.35rem, 0.7vw, 0.6rem) solid currentColor;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.app-resource-label {
+  position: absolute;
+  inset: auto 1.25rem 1.25rem;
+  opacity: 0;
+}
+
+.app-resource-label > span {
+  display: block;
+}
+
+.app-resource-tile:hover .app-resource-icon,
+.app-resource-tile:focus-within .app-resource-icon {
+  opacity: 0.25;
+}
+
+.app-resource-tile:hover .app-resource-label,
+.app-resource-tile:focus-within .app-resource-label {
+  opacity: 1;
+}
+
+.app-resource-label a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.app-resource-label a:hover,
+.app-resource-label a:focus-visible {
   text-decoration: underline;
 }
 
-.app-resource-tile:focus-visible {
+.app-resource-label a:focus-visible {
   outline: 2px solid var(--ink);
   outline-offset: 2px;
 }
@@ -606,9 +656,21 @@ body.lightbox-open {
 
   .app-resource-tile {
     display: block;
-    aspect-ratio: auto;
     padding: 0.75rem;
     font-size: 0.9rem;
+  }
+
+  .app-resource-icon {
+    display: none;
+  }
+
+  .app-resource-label {
+    position: static;
+    opacity: 1;
+  }
+
+  .app-resource-label > span {
+    display: inline;
   }
 
   .project-images {
