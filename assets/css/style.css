@@ -398,6 +398,30 @@ body.lightbox-open {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
 }
 
+.pareto-game-placeholder {
+  display: block;
+  width: 100%;
+  aspect-ratio: 800 / 336;
+  background: #d3d3d3;
+}
+
+.pareto-game-tile .tile-meta {
+  color: var(--ink);
+  text-shadow: none;
+}
+
+.app-beta-badge {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.12rem 0.35rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  line-height: 1.1;
+  vertical-align: 0.12em;
+  text-transform: uppercase;
+}
+
 .app-tile:hover .tile-meta strong,
 .app-tile:focus-visible .tile-meta strong {
   text-decoration: underline;
